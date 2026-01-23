@@ -109,8 +109,11 @@ app.get('/process', (req, res) => {
 
 app.get('/portfolio', (req, res) => {
     res.render('pages/portfolio', { 
-        title: 'Portfolio - Nostrum Dream Spaces',
-        page: 'portfolio'
+        title: 'Portfolio - Our Projects | Nostrum Dream Spaces',
+        description: 'Explore our portfolio of completed interior design and construction projects in Haryana. Residential and commercial project showcase with luxury designs.',
+        keywords: 'design portfolio, interior design projects Haryana, construction projects Palwal, completed projects, luxury interiors, commercial design',
+        page: 'pages/portfolio',
+        currentUrl: '/portfolio'
     });
 });
 
@@ -136,7 +139,7 @@ app.get('/blog', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-    res.render('layout', { 
+    res.render('pages/contact', { 
         title: 'Contact Us - Get in Touch | Nostrum Dream Spaces',
         description: 'Contact Nostrum Dream Spaces for your interior design and construction needs in Haryana. Get free consultation and quotes.',
         keywords: 'contact interior designer Haryana, construction company contact Palwal, design consultation, free quote',
@@ -146,7 +149,7 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/quote', (req, res) => {
-    res.render('layout', { 
+    res.render('pages/quote', { 
         title: 'Get Free Quote - Interior Design & Construction | Nostrum Dream Spaces',
         description: 'Get a free detailed quote for your interior design or construction project. Quick response within 24 hours with transparent pricing.',
         keywords: 'free interior design quote, construction quote Mumbai, design estimate, project cost',

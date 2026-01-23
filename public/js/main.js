@@ -19,6 +19,7 @@ function initNavigation() {
     const header = document.getElementById('header');
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const dropdowns = document.querySelectorAll('.dropdown');
     
     // Header scroll effect
     window.addEventListener('scroll', function() {
@@ -31,20 +32,62 @@ function initNavigation() {
     
     // Mobile menu toggle
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
             document.body.classList.toggle('menu-open');
         });
         
-        // Close menu when clicking on links
-        const navLinks = navMenu.querySelectorAll('.nav-link');
+        // Close menu when clicking on non-dropdown links
+        const navLinks = navMenu.querySelectorAll('.nav-link:not(.dropdown .nav-link)');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.classList.remove('menu-open');
+                
+                // Close all dropdowns
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
             });
+        });
+        
+        // Handle dropdown clicks on mobile
+        dropdowns.forEach(dropdown => {
+            const dropdownLink = dropdown.querySelector('.nav-link');
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+            
+            if (dropdownLink && dropdownMenu) {
+                dropdownLink.addEventListener('click', function(e) {
+                    // On mobile, prevent default and toggle dropdown
+                    if (window.innerWidth <= 991) {
+                        e.preventDefault();
+                        
+                        // Close other dropdowns
+                        dropdowns.forEach(otherDropdown => {
+                            if (otherDropdown !== dropdown) {
+                                otherDropdown.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle current dropdown
+                        dropdown.classList.toggle('active');
+                    }
+                });
+                
+                // Close dropdown when clicking on dropdown links
+                const dropdownLinks = dropdownMenu.querySelectorAll('a');
+                dropdownLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.classList.remove('menu-open');
+                        dropdown.classList.remove('active');
+                    });
+                });
+            }
         });
         
         // Close menu when clicking outside
@@ -53,6 +96,25 @@ function initNavigation() {
                 navToggle.classList.remove('active');
                 navMenu.classList.remove('active');
                 document.body.classList.remove('menu-open');
+                
+                // Close all dropdowns
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 991) {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                
+                // Close all dropdowns
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
             }
         });
     }
@@ -828,4 +890,237 @@ const errorStyles = `
 // Inject error styles
 const styleSheet = document.createElement('style');
 styleSheet.textContent = errorStyles;
-document.head.appendChild(styleSheet);
+document.head.appendChild(styleSheet);// 
+Portfolio Page Functionality
+function initPortfolio() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    
+    let visibleItems = 6; // Initially show 6 items
+    let currentFilter = 'all';
+    
+    // Initialize portfolio
+    if (portfolioItems.length > 0) {
+        showPortfolioItems();
+        
+        // Filter functionality
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Reset visible items count
+                visibleItems = 6;
+                currentFilter = filter;
+                
+                // Filter and show items
+                filterPortfolioItems(filter);
+                showPortfolioItems();
+            });
+        });
+        
+        // Load more functionality
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', function() {
+                visibleItems += 6;
+                showPortfolioItems();
+            });
+        }
+    }
+    
+    function filterPortfolioItems(filter) {
+        portfolioItems.forEach(item => {
+            const categories = item.getAttribute('data-category');
+            
+            if (filter === 'all' || categories.includes(filter)) {
+                item.style.display = 'block';
+                item.classList.remove('hidden');
+            } else {
+                item.style.display = 'none';
+                item.classList.add('hidden');
+            }
+        });
+    }
+    
+    function showPortfolioItems() {
+        const visiblePortfolioItems = Array.from(portfolioItems).filter(item => 
+            item.style.display !== 'none'
+        );
+        
+        visiblePortfolioItems.forEach((item, index) => {
+            if (index < visibleItems) {
+                item.style.display = 'block';
+                item.classList.remove('hidden');
+                // Add fade-in animation
+                setTimeout(() => {
+                    item.classList.add('fade-in');
+                }, index * 100);
+            } else {
+                item.style.display = 'none';
+                item.classList.add('hidden');
+            }
+        });
+        
+        // Show/hide load more button
+        if (loadMoreBtn) {
+            if (visiblePortfolioItems.length <= visibleItems) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-block';
+            }
+        }
+    }
+}
+
+// Portfolio Image Lightbox (Simple Implementation)
+function initPortfolioLightbox() {
+    const portfolioImages = document.querySelectorAll('.portfolio-image img');
+    
+    portfolioImages.forEach(img => {
+        img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openLightbox(this.src, this.alt);
+        });
+    });
+    
+    function openLightbox(src, alt) {
+        // Create lightbox overlay
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox-overlay';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <img src="${src}" alt="${alt}" class="lightbox-image">
+                <button class="lightbox-close">&times;</button>
+                <div class="lightbox-caption">${alt}</div>
+            </div>
+        `;
+        
+        // Add lightbox styles
+        lightbox.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        `;
+        
+        const content = lightbox.querySelector('.lightbox-content');
+        content.style.cssText = `
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            text-align: center;
+        `;
+        
+        const image = lightbox.querySelector('.lightbox-image');
+        image.style.cssText = `
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+        `;
+        
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        closeBtn.style.cssText = `
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        `;
+        
+        const caption = lightbox.querySelector('.lightbox-caption');
+        caption.style.cssText = `
+            color: white;
+            margin-top: 20px;
+            font-size: 16px;
+        `;
+        
+        // Add to page
+        document.body.appendChild(lightbox);
+        
+        // Animate in
+        setTimeout(() => {
+            lightbox.style.opacity = '1';
+        }, 10);
+        
+        // Close functionality
+        function closeLightbox() {
+            lightbox.style.opacity = '0';
+            setTimeout(() => {
+                document.body.removeChild(lightbox);
+            }, 300);
+        }
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard close
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    }
+}
+
+// Portfolio Statistics Counter Animation
+function initPortfolioCounters() {
+    const counters = document.querySelectorAll('.stat-number.counter');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !counter.classList.contains('counted')) {
+                    counter.classList.add('counted');
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        counter.textContent = Math.floor(current) + (target > 50 ? '+' : '');
+                    }, 16);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(counter);
+    });
+}
+
+// Initialize portfolio functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initPortfolio();
+    initPortfolioLightbox();
+    initPortfolioCounters();
+});
