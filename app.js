@@ -1,42 +1,26 @@
-// Load environment variables
-require('dotenv').config();
-
 const express = require('express');
 const path = require('path');
-const helmet = require('helmet');
-const compression = require('compression');
-const cors = require('cors');
-const rateLimit = require('express-rate-limit');
+const app = express();
 
 // const app = express();
 // const PORT = process.env.PORT || 3000;
 // const HOST = process.env.HOST || 'localhost';
 
 // Security middleware
-app.use(helmet({
-    contentSecurityPolicy: false, // Disable for development
-    crossOriginEmbedderPolicy: false
-}));
-
-// Compression middleware
-if (process.env.ENABLE_COMPRESSION === 'true') {
-    app.use(compression());
-}
-
-// CORS middleware
-if (process.env.ENABLE_CORS === 'true') {
-    app.use(cors());
-}
+// app.use(helmet({
+//     contentSecurityPolicy: false, // Disable for development
+//     crossOriginEmbedderPolicy: false
+// }));
 
 // Rate limiting
-const limiter = rateLimit({
-    windowMs: (process.env.RATE_LIMIT_WINDOW || 15) * 60 * 1000, // 15 minutes
-    max: process.env.RATE_LIMIT_MAX_REQUESTS || 100, // limit each IP to 100 requests per windowMs
-    message: 'Too many requests from this IP, please try again later.'
-});
-app.use(limiter);
+// const limiter = rateLimit({
+//     windowMs: (process.env.RATE_LIMIT_WINDOW || 15) * 60 * 1000, // 15 minutes
+//     max: process.env.RATE_LIMIT_MAX_REQUESTS || 100, // limit each IP to 100 requests per windowMs
+//     message: 'Too many requests from this IP, please try again later.'
+// });
+// app.use(limiter);
 
-const app = express();
+
 const PORT = process.env.PORT || 3000;
 
 // Set EJS as templating engine
