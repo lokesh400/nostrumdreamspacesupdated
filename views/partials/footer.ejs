@@ -58,29 +58,29 @@
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <p>123 Design Street, Premium Plaza</p>
+                            <p><%= process.env.COMPANY_ADDRESS || '123 Design Street, Premium Plaza' %></p>
                             <p>Mumbai, Maharashtra 400001</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <p>+91 98765 43210</p>
-                            <p>+91 87654 32109</p>
+                            <p><%= process.env.COMPANY_PHONE_1 || '+91 98765 43210' %></p>
+                            <p><%= process.env.COMPANY_PHONE_2 || '+91 87654 32109' %></p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <p>info@nostrumdreamspaces.com</p>
-                            <p>projects@nostrumdreamspaces.com</p>
+                            <p><%= process.env.COMPANY_EMAIL_1 || 'info@nostrumdreamspaces.com' %></p>
+                            <p><%= process.env.COMPANY_EMAIL_2 || 'projects@nostrumdreamspaces.com' %></p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
-                            <p>Sunday: 10:00 AM - 5:00 PM</p>
+                            <p>Mon - Sat: <%= process.env.BUSINESS_HOURS_WEEKDAY || '9:00 AM - 7:00 PM' %></p>
+                            <p>Sunday: <%= process.env.BUSINESS_HOURS_WEEKEND || '10:00 AM - 5:00 PM' %></p>
                         </div>
                     </div>
                 </div>
