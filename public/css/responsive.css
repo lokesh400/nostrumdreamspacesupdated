@@ -688,4 +688,355 @@ Additional Overflow Prevention */
     .container {
         max-width: calc(100vw - 15px);
     }
+}/* E
+nhanced Mobile Responsiveness */
+
+/* Better button spacing on mobile */
+@media (max-width: 767px) {
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .btn-large {
+        padding: 14px 25px;
+        font-size: 16px;
+    }
+    
+    .hero-cta {
+        gap: 15px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Better service card layout */
+    .service-card {
+        margin-bottom: 20px;
+        padding: 25px 20px;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .service-icon i {
+        font-size: 24px;
+    }
+    
+    /* Improved project cards */
+    .project-card {
+        margin-bottom: 20px;
+    }
+    
+    .project-image img {
+        height: 250px;
+    }
+    
+    /* Better testimonial layout */
+    .testimonial-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    /* Enhanced form layout */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 25px 20px;
+    }
+    
+    /* Better navigation */
+    .nav-list {
+        gap: 15px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    
+    /* Improved section spacing */
+    .section-padding {
+        padding: 50px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    /* Better hero content */
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    
+    /* Enhanced footer */
+    .footer-content {
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra small mobile improvements */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .btn {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+    
+    .btn-large {
+        padding: 12px 22px;
+        font-size: 15px;
+    }
+    
+    .service-card {
+        padding: 20px 15px;
+    }
+    
+    .testimonial-card {
+        padding: 20px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-description {
+        font-size: 15px;
+    }
+    
+    /* Better form elements */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+    
+    /* Improved navigation */
+    .navbar {
+        padding: 12px 0;
+    }
+    
+    .logo-text h1 {
+        font-size: 18px;
+    }
+    
+    .tagline {
+        font-size: 9px;
+    }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        height: 100vh;
+        min-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 15px;
+    }
+    
+    .section-padding {
+        padding: 40px 0;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (max-width: 767px) {
+    /* Larger touch targets */
+    .btn,
+    .nav-link,
+    .social-link,
+    .filter-btn {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Better spacing for touch */
+    .projects-filter {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .filter-btn {
+        padding: 12px 20px;
+        min-width: 120px;
+    }
+    
+    /* Improved dropdown for mobile */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: #f8f9fa;
+        margin-top: 15px;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    
+    .dropdown-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Better accordion for FAQ */
+    .faq-question {
+        padding: 20px;
+        min-height: 60px;
+    }
+    
+    .faq-question h4 {
+        font-size: 16px;
+    }
+    
+    /* Enhanced contact methods */
+    .contact-method {
+        padding: 25px 15px;
+    }
+    
+    .method-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .method-icon i {
+        font-size: 24px;
+    }
+}
+
+/* Improved grid layouts for mobile */
+@media (max-width: 767px) {
+    .services-grid,
+    .projects-grid,
+    .testimonials-slider,
+    .team-grid,
+    .values-grid,
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 10px;
+    }
+    
+    .contact-methods,
+    .why-quote-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+}
+
+/* Better image handling on mobile */
+@media (max-width: 767px) {
+    .about-image,
+    .why-image,
+    .story-image,
+    .approach-image {
+        margin-top: 30px;
+    }
+    
+    .about-badge {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+        display: inline-block;
+    }
+    
+    .hero-indicators {
+        bottom: 20px;
+        gap: 8px;
+    }
+    
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Enhanced typography for mobile */
+@media (max-width: 767px) {
+    h1 { font-size: 2.2rem; line-height: 1.2; }
+    h2 { font-size: 1.8rem; line-height: 1.3; }
+    h3 { font-size: 1.4rem; line-height: 1.3; }
+    h4 { font-size: 1.2rem; line-height: 1.4; }
+    
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .section-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.1rem; }
+    
+    p, .section-description {
+        font-size: 14px;
+    }
 }

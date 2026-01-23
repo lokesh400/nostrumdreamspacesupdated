@@ -1,568 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nostrum Dream Spaces</title>
-    <meta name="description" content="Nostrum Dream Spaces - Premium Interior Design, Exterior Design, Construction & Turnkey Solutions. Designing Dreams. Building Reality.">
-    <meta name="keywords" content="interior design, exterior design, construction, turnkey projects, modular kitchen, renovation, premium design">
-    
+    <meta name="description"
+        content="Nostrum Dream Spaces - Premium Interior Design, Exterior Design, Construction & Turnkey Solutions. Designing Dreams. Building Reality.">
+    <meta name="keywords"
+        content="interior design, exterior design, construction, turnkey projects, modular kitchen, renovation, premium design">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/animations.css">
     <link rel="stylesheet" href="/css/responsive.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
-<body style="width: 100%;" >
-    
-<%- include('./partials/header.ejs') %>
 
-<section class="hero" id="hero" style="margin-top: 75px;">
-    <div class="hero-slider">
-        <div class="hero-slide active" style="background-image: url('/images/hero-1.png')">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title animate-fade-up">
-                        Designing Dreams.<br>
-                        <span class="text-primary">Building Reality.</span>
-                    </h1>
-                    <p class="hero-subtitle animate-fade-up delay-1">
-                        Transform your spaces with our premium interior design, exterior design, 
-                        and construction services. From concept to completion, we create extraordinary environments.
-                    </p>
-                    <div class="hero-cta animate-fade-up delay-2">
-                        <a href="/quote" class="btn btn-primary btn-large">Get Free Quote</a>
-                        <a href="/portfolio" class="btn btn-outline btn-large">View Portfolio</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-slide" style="background-image: url('/images/hero/hero-2.jpg')">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        Premium Interior<br>
-                        <span class="text-primary">Design Solutions</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Crafting luxurious interiors that reflect your personality and lifestyle. 
-                        Experience the perfect blend of aesthetics and functionality.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="/interior-design" class="btn btn-primary btn-large">Explore Interiors</a>
-                        <a href="/contact" class="btn btn-outline btn-large">Consult Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-slide" style="background-image: url('/images/hero/hero-3.jpg')">
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        Complete Construction<br>
-                        <span class="text-primary">& Turnkey Projects</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        End-to-end construction solutions with uncompromising quality. 
-                        From foundation to finishing, we deliver excellence at every step.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="/construction" class="btn btn-primary btn-large">View Projects</a>
-                        <a href="/process" class="btn btn-outline btn-large">Our Process</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="hero-nav">
-        <button class="hero-nav-btn prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
-        <button class="hero-nav-btn next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
-    </div>
-    
-    <div class="hero-indicators">
-        <span class="indicator active" data-slide="0"></span>
-        <span class="indicator" data-slide="1"></span>
-        <span class="indicator" data-slide="2"></span>
-    </div>
-</section>
+<body style="width: 100%;">
 
-<!-- Who We Are Section -->
-<section class="about-intro section-padding">
-    <div class="container">
-        <div class="row align-center">
-            <div class="col-lg-6">
-                <div class="about-content">
-                    <span class="section-label">Who We Are</span>
-                    <h2 class="section-title">Creating Exceptional Spaces Since 2010</h2>
+    <%- include('./partials/header.ejs') %>
+
+        <section class="hero" id="hero" style="margin-top: 75px;">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('/images/hero-1.png')">
+                    <div class="hero-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="hero-title animate-fade-up">
+                                Designing Dreams.<br>
+                                <span class="text-primary">Building Reality.</span>
+                            </h1>
+                            <p class="hero-subtitle animate-fade-up delay-1">
+                                Transform your spaces with our premium interior design, exterior design,
+                                and construction services. From concept to completion, we create extraordinary
+                                environments.
+                            </p>
+                            <div class="hero-cta animate-fade-up delay-2">
+                                <a href="/quote" class="btn btn-primary btn-large">Get Free Quote</a>
+                                <a href="/portfolio" class="btn btn-outline btn-large">View Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')">
+                    <div class="hero-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                Premium Interior<br>
+                                <span class="text-primary">Design Solutions</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Crafting luxurious interiors that reflect your personality and lifestyle.
+                                Experience the perfect blend of aesthetics and functionality.
+                            </p>
+                            <div class="hero-cta">
+                                <a href="/interior-design" class="btn btn-primary btn-large">Explore Interiors</a>
+                                <a href="/contact" class="btn btn-outline btn-large">Consult Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide"
+                    style="background-image: url('https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/bh-new-home-page-revamp/hero-banner-images/compress-banner/blur-two_result.png')">
+                    <div class="hero-overlay"></div>
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                Complete Construction<br>
+                                <span class="text-primary">& Turnkey Projects</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                End-to-end construction solutions with uncompromising quality.
+                                From foundation to finishing, we deliver excellence at every step.
+                            </p>
+                            <div class="hero-cta">
+                                <a href="/construction" class="btn btn-primary btn-large">View Projects</a>
+                                <a href="/process" class="btn btn-outline btn-large">Our Process</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-nav">
+                <button class="hero-nav-btn prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="hero-nav-btn next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="hero-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section class="about-intro section-padding">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <span class="section-label">Who We Are</span>
+                            <h2 class="section-title">Creating Exceptional Spaces Since 2010</h2>
+                            <p class="section-description">
+                                Nostrum Dream Spaces is a premier interior design and construction company
+                                dedicated to transforming your vision into reality. With over a decade of
+                                experience, we specialize in creating luxurious, functional, and sustainable spaces.
+                            </p>
+                            <div class="about-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-award"></i>
+                                    <div>
+                                        <h4>500+ Projects Completed</h4>
+                                        <p>Successfully delivered premium projects across residential and commercial
+                                            sectors</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h4>Expert Team</h4>
+                                        <p>Skilled architects, designers, and craftsmen committed to excellence</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <h4>Timely Delivery</h4>
+                                        <p>On-time project completion with uncompromising quality standards</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/about" class="btn btn-primary">Discover Our Story</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="About Nostrum Dream Spaces" class="img-fluid">
+                            <div class="about-badge">
+                                <span class="badge-number">2+</span>
+                                <span class="badge-text">Years of Excellence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview Section -->
+        <section class="services-overview section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Our Services</span>
+                    <h2 class="section-title">Comprehensive Design & Construction Solutions</h2>
                     <p class="section-description">
-                        Nostrum Dream Spaces is a premier interior design and construction company 
-                        dedicated to transforming your vision into reality. With over a decade of 
-                        experience, we specialize in creating luxurious, functional, and sustainable spaces.
+                        From conceptual design to final execution, we offer a complete range of services
+                        to bring your dream spaces to life with precision and artistry.
                     </p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <i class="fas fa-award"></i>
-                            <div>
-                                <h4>500+ Projects Completed</h4>
-                                <p>Successfully delivered premium projects across residential and commercial sectors</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <h4>Expert Team</h4>
-                                <p>Skilled architects, designers, and craftsmen committed to excellence</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Timely Delivery</h4>
-                                <p>On-time project completion with uncompromising quality standards</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="/about" class="btn btn-primary">Learn More About Us</a>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="about-image">
-                    <img src="/images/about/about-intro.jpg" alt="About Nostrum Dream Spaces" class="img-fluid">
-                    <div class="about-badge">
-                        <span class="badge-number">14+</span>
-                        <span class="badge-text">Years of Excellence</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Services Overview Section -->
-<section class="services-overview section-padding bg-light">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="section-label">Our Services</span>
-            <h2 class="section-title">Comprehensive Design & Construction Solutions</h2>
-            <p class="section-description">
-                From conceptual design to final execution, we offer a complete range of services 
-                to bring your dream spaces to life with precision and artistry.
-            </p>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-home"></i>
-                </div>
-                <h3>Interior Design</h3>
-                <p>Luxurious residential and commercial interior design solutions tailored to your lifestyle and brand.</p>
-                <a href="/interior-design" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-building"></i>
-                </div>
-                <h3>Exterior Design</h3>
-                <p>Stunning facade treatments and elevation designs that create lasting first impressions.</p>
-                <a href="/exterior-design" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-hammer"></i>
-                </div>
-                <h3>Construction & Turnkey</h3>
-                <p>End-to-end construction services from planning to handover with quality assurance.</p>
-                <a href="/construction" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-kitchen-set"></i>
-                </div>
-                <h3>Modular Works</h3>
-                <p>Custom modular kitchens, wardrobes, and furniture designed for modern living.</p>
-                <a href="/modular-works" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-th-large"></i>
-                </div>
-                <h3>Flooring & Tiling</h3>
-                <p>Premium flooring solutions including marble, granite, tiles, and wooden flooring.</p>
-                <a href="/flooring-tiling" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-wrench"></i>
-                </div>
-                <h3>Plumbing & Waterproofing</h3>
-                <p>Complete plumbing systems and waterproofing solutions for lasting protection.</p>
-                <a href="/plumbing-waterproofing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-        
-        <div class="text-center mt-5">
-            <a href="/services" class="btn btn-primary btn-large">View All Services</a>
-        </div>
-    </div>
-</section>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Interior Design</h3>
+                        <p>Luxurious residential and commercial interior design solutions tailored to your lifestyle and
+                            brand.</p>
+                        <a href="/interior-design" class="service-link">Explore Interiors <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
 
-<!-- Featured Projects Section -->
-<section class="featured-projects section-padding">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="section-label">Our Work</span>
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-description">
-                Explore our portfolio of exceptional projects that showcase our commitment 
-                to design excellence and construction quality.
-            </p>
-        </div>
-        
-        <div class="projects-filter">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="residential">Residential</button>
-            <button class="filter-btn" data-filter="commercial">Commercial</button>
-            <button class="filter-btn" data-filter="interior">Interior</button>
-            <button class="filter-btn" data-filter="exterior">Exterior</button>
-        </div>
-        
-        <div class="projects-grid">
-            <div class="project-card" data-category="residential interior">
-                <div class="project-image">
-                    <img src="/images/projects/project-1.jpg" alt="Luxury Villa Interior">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <h3>Luxury Villa Interior</h3>
-                            <p>Modern luxury interior design for a premium villa</p>
-                            <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
                         </div>
+                        <h3>Exterior Design</h3>
+                        <p>Stunning facade treatments and elevation designs that create lasting first impressions.</p>
+                        <a href="/exterior-design" class="service-link">View Designs <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="commercial interior">
-                <div class="project-image">
-                    <img src="/images/projects/project-2.jpg" alt="Corporate Office Design">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <h3>Corporate Office Design</h3>
-                            <p>Contemporary office space with modern amenities</p>
-                            <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="residential exterior">
-                <div class="project-image">
-                    <img src="/images/projects/project-3.jpg" alt="Modern House Elevation">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <h3>Modern House Elevation</h3>
-                            <p>Stunning exterior design with contemporary elements</p>
-                            <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="commercial exterior">
-                <div class="project-image">
-                    <img src="/images/projects/project-4.jpg" alt="Restaurant Interior">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <h3>Restaurant Interior</h3>
-                            <p>Elegant dining space with ambient lighting</p>
-                            <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="residential interior">
-                <div class="project-image">
-                    <img src="/images/projects/project-5.jpg" alt="Apartment Renovation">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <h3>Apartment Renovation</h3>
-                            <p>Complete makeover of a 3BHK apartment</p>
-                            <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card" data-category="commercial interior">
-                <div class="project-image">
-                    <img src="/images/projects/project-6.jpg" alt="Retail Store Design">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <h3>Retail Store Design</h3>
-                            <p>Modern retail space with optimized layout</p>
-                            <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center mt-5">
-            <a href="/portfolio" class="btn btn-primary btn-large">View Complete Portfolio</a>
-        </div>
-    </div>
-</section>
 
-<!-- Why Choose Us Section -->
-<section class="why-choose-us section-padding bg-dark text-white">
-    <div class="container">
-        <div class="row align-center">
-            <div class="col-lg-6">
-                <div class="why-content">
-                    <span class="section-label text-primary">Why Choose Us</span>
-                    <h2 class="section-title">Excellence in Every Detail</h2>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Construction & Turnkey</h3>
+                        <p>End-to-end construction services from planning to handover with quality assurance.</p>
+                        <a href="/construction" class="service-link">View Projects <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-kitchen-set"></i>
+                        </div>
+                        <h3>Modular Works</h3>
+                        <p>Custom modular kitchens, wardrobes, and furniture designed for modern living.</p>
+                        <a href="/modular-works" class="service-link">Explore Solutions <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <h3>Flooring & Tiling</h3>
+                        <p>Premium flooring solutions including marble, granite, tiles, and wooden flooring.</p>
+                        <a href="/flooring-tiling" class="service-link">View Options <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Plumbing & Waterproofing</h3>
+                        <p>Complete plumbing systems and waterproofing solutions for lasting protection.</p>
+                        <a href="/plumbing-waterproofing" class="service-link">Explore Services <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="/services" class="btn btn-primary btn-large">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="featured-projects section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Our Work</span>
+                    <h2 class="section-title">Featured Projects</h2>
                     <p class="section-description">
-                        We combine creativity, expertise, and dedication to deliver spaces that 
-                        exceed expectations. Our commitment to quality and customer satisfaction 
-                        sets us apart in the industry.
+                        Explore our portfolio of exceptional projects that showcase our commitment
+                        to design excellence and construction quality.
                     </p>
-                    
-                    <div class="why-features">
-                        <div class="why-feature">
-                            <div class="feature-number">01</div>
-                            <div class="feature-content">
-                                <h4>Premium Quality Materials</h4>
-                                <p>We source only the finest materials and finishes to ensure lasting beauty and durability.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-feature">
-                            <div class="feature-number">02</div>
-                            <div class="feature-content">
-                                <h4>Expert Craftsmanship</h4>
-                                <p>Our skilled artisans and craftsmen bring years of experience to every project.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-feature">
-                            <div class="feature-number">03</div>
-                            <div class="feature-content">
-                                <h4>Personalized Service</h4>
-                                <p>Every project is tailored to your unique needs, preferences, and lifestyle.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="why-feature">
-                            <div class="feature-number">04</div>
-                            <div class="feature-content">
-                                <h4>Timely Completion</h4>
-                                <p>We respect your time and ensure projects are completed within agreed timelines.</p>
+                </div>
+
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="residential">Residential</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn" data-filter="interior">Interior</button>
+                    <button class="filter-btn" data-filter="exterior">Exterior</button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card" data-category="residential interior">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Luxury Villa Interior">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Luxury Villa Interior</h3>
+                                    <p>Modern luxury interior design for a premium villa</p>
+                                    <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="why-image">
-                    <img src="/images/why-choose-us.jpg" alt="Why Choose Nostrum Dream Spaces" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Process Section -->
-<section class="process-overview section-padding">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="section-label">Our Process</span>
-            <h2 class="section-title">From Concept to Completion</h2>
-            <p class="section-description">
-                Our systematic approach ensures seamless project execution from initial 
-                consultation to final handover, delivering exceptional results every time.
-            </p>
-        </div>
-        
-        <div class="process-steps">
-            <div class="process-step">
-                <div class="step-number">01</div>
-                <div class="step-icon">
-                    <i class="fas fa-comments"></i>
-                </div>
-                <h3>Consultation</h3>
-                <p>Understanding your vision, requirements, and budget through detailed discussions.</p>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">02</div>
-                <div class="step-icon">
-                    <i class="fas fa-drafting-compass"></i>
-                </div>
-                <h3>Design</h3>
-                <p>Creating innovative design concepts with 3D visualizations and material selections.</p>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">03</div>
-                <div class="step-icon">
-                    <i class="fas fa-clipboard-list"></i>
-                </div>
-                <h3>Planning</h3>
-                <p>Detailed project planning, timeline creation, and resource allocation.</p>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">04</div>
-                <div class="step-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3>Execution</h3>
-                <p>Professional execution with regular quality checks and progress updates.</p>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">05</div>
-                <div class="step-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <h3>Quality Check</h3>
-                <p>Thorough quality inspection and final touches to ensure perfection.</p>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">06</div>
-                <div class="step-icon">
-                    <i class="fas fa-key"></i>
-                </div>
-                <h3>Handover</h3>
-                <p>Final project handover with documentation and after-service support.</p>
-            </div>
-        </div>
-        
-        <div class="text-center mt-5">
-            <a href="/process" class="btn btn-primary btn-large">Learn More About Our Process</a>
-        </div>
-    </div>
-</section>
+                    <div class="project-card" data-category="commercial interior">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Corporate Office Design">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Corporate Office Design</h3>
+                                    <p>Contemporary office space with modern amenities</p>
+                                    <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- Testimonials Section -->
-<section class="testimonials section-padding bg-light">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="section-label">Client Testimonials</span>
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-description">
-                Don't just take our word for it. Here's what our satisfied clients 
-                have to say about their experience with Nostrum Dream Spaces.
-            </p>
-        </div>
-        
-        <div class="testimonials-slider">
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="project-card" data-category="residential exterior">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Modern House Elevation">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Modern House Elevation</h3>
+                                    <p>Stunning exterior design with contemporary elements</p>
+                                    <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>"Nostrum Dream Spaces transformed our villa into a masterpiece. Their attention to detail and quality of work exceeded our expectations. Highly recommended!"</p>
-                </div>
-                <div class="testimonial-author">
-                    <img src="/images/testimonials/client-1.jpg" alt="Rajesh Sharma">
-                    <div class="author-info">
-                        <h4>Rajesh Sharma</h4>
-                        <span>Villa Owner, Mumbai</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Professional team, excellent design sense, and timely completion. Our office renovation was handled perfectly from start to finish."</p>
-                </div>
-                <div class="testimonial-author">
-                    <img src="/images/testimonials/client-2.jpg" alt="Priya Patel">
-                    <div class="author-info">
-                        <h4>Priya Patel</h4>
-                        <span>Business Owner, Pune</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Amazing work on our apartment renovation. The team was professional, creative, and delivered exactly what we envisioned. Thank you!"</p>
-                </div>
-                <div class="testimonial-author">
-                    <img src="/images/testimonials/client-3.jpg" alt="Amit Kumar">
-                    <div class="author-info">
-                        <h4>Amit Kumar</h4>
-                        <span>Homeowner, Delhi</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center mt-5">
-            <a href="/testimonials" class="btn btn-primary">Read More Testimonials</a>
-        </div>
-    </div>
-</section>
 
-<!-- CTA Section -->
-<section class="cta-section section-padding bg-primary text-white">
-    <div class="container">
-        <div class="cta-content text-center">
-            <h2>Ready to Transform Your Space?</h2>
-            <p>Let's discuss your project and bring your dream space to life. Get a free consultation and quote today.</p>
-            <div class="cta-buttons">
-                <a href="/quote" class="btn btn-white btn-large">Get Free Quote</a>
-                <a href="/contact" class="btn btn-outline-white btn-large">Schedule Consultation</a>
+                    <div class="project-card" data-category="commercial exterior">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Restaurant Interior">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Restaurant Interior</h3>
+                                    <p>Elegant dining space with ambient lighting</p>
+                                    <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="residential interior">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Apartment Renovation">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Apartment Renovation</h3>
+                                    <p>Complete makeover of a 3BHK apartment</p>
+                                    <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="commercial interior">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Retail Store Design">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Retail Store Design</h3>
+                                    <p>Modern retail space with optimized layout</p>
+                                    <a href="/portfolio" class="btn btn-outline btn-small">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="/portfolio" class="btn btn-primary btn-large">View Complete Portfolio</a>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<%- include('./partials/footer.ejs') %>
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us section-padding bg-dark text-white">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-lg-6">
+                        <div class="why-content">
+                            <span class="section-label text-primary">Why Choose Us</span>
+                            <h2 class="section-title">Excellence in Every Detail</h2>
+                            <p class="section-description">
+                                We combine creativity, expertise, and dedication to deliver spaces that
+                                exceed expectations. Our commitment to quality and customer satisfaction
+                                sets us apart in the industry.
+                            </p>
 
-    <script src="/js/main.js"></script>
-    <script src="/js/animations.js"></script>
+                            <div class="why-features">
+                                <div class="why-feature">
+                                    <div class="feature-number">01</div>
+                                    <div class="feature-content">
+                                        <h4>Premium Quality Materials</h4>
+                                        <p>We source only the finest materials and finishes to ensure lasting beauty and
+                                            durability.</p>
+                                    </div>
+                                </div>
+
+                                <div class="why-feature">
+                                    <div class="feature-number">02</div>
+                                    <div class="feature-content">
+                                        <h4>Expert Craftsmanship</h4>
+                                        <p>Our skilled artisans and craftsmen bring years of experience to every
+                                            project.</p>
+                                    </div>
+                                </div>
+
+                                <div class="why-feature">
+                                    <div class="feature-number">03</div>
+                                    <div class="feature-content">
+                                        <h4>Personalized Service</h4>
+                                        <p>Every project is tailored to your unique needs, preferences, and lifestyle.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="why-feature">
+                                    <div class="feature-number">04</div>
+                                    <div class="feature-content">
+                                        <h4>Timely Completion</h4>
+                                        <p>We respect your time and ensure projects are completed within agreed
+                                            timelines.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="why-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Why Choose Nostrum Dream Spaces" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-overview section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Our Process</span>
+                    <h2 class="section-title">From Concept to Completion</h2>
+                    <p class="section-description">
+                        Our systematic approach ensures seamless project execution from initial
+                        consultation to final handover, delivering exceptional results every time.
+                    </p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Consultation</h3>
+                        <p>Understanding your vision, requirements, and budget through detailed discussions.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>Design</h3>
+                        <p>Creating innovative design concepts with 3D visualizations and material selections.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Planning</h3>
+                        <p>Detailed project planning, timeline creation, and resource allocation.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Execution</h3>
+                        <p>Professional execution with regular quality checks and progress updates.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">05</div>
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Quality Check</h3>
+                        <p>Thorough quality inspection and final touches to ensure perfection.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">06</div>
+                        <div class="step-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3>Handover</h3>
+                        <p>Final project handover with documentation and after-service support.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="/process" class="btn btn-primary btn-large">Discover Our Process</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Client Testimonials</span>
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-description">
+                        Don't just take our word for it. Here's what our satisfied clients
+                        have to say about their experience with Nostrum Dream Spaces.
+                    </p>
+                </div>
+
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Nostrum Dream Spaces transformed our villa into a masterpiece. Their attention to detail
+                                and quality of work exceeded our expectations. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                alt="Rajesh Sharma">
+                            <div class="author-info">
+                                <h4>Rajesh Sharma</h4>
+                                <span>Villa Owner, Mumbai</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Professional team, excellent design sense, and timely completion. Our office renovation
+                                was handled perfectly from start to finish."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                alt="Priya Patel">
+                            <div class="author-info">
+                                <h4>Priya Patel</h4>
+                                <span>Business Owner, Pune</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Amazing work on our apartment renovation. The team was professional, creative, and
+                                delivered exactly what we envisioned. Thank you!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                alt="Amit Kumar">
+                            <div class="author-info">
+                                <h4>Amit Kumar</h4>
+                                <span>Homeowner, Delhi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="/testimonials" class="btn btn-primary">Read More Testimonials</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section section-padding bg-primary text-white">
+            <div class="container">
+                <div class="cta-content text-center">
+                    <h2>Ready to Transform Your Space?</h2>
+                    <p>Let's discuss your project and bring your dream space to life. Get a free consultation and quote
+                        today.</p>
+                    <div class="cta-buttons">
+                        <a href="/quote" class="btn btn-white btn-large">Get Free Quote</a>
+                        <a href="/contact" class="btn btn-outline-white btn-large">Schedule Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include('./partials/footer.ejs') %>
+
+            <script src="/js/main.js"></script>
+            <script src="/js/animations.js"></script>
 </body>
+
 </html>

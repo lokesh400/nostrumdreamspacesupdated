@@ -1,51 +1,61 @@
-# Image Placeholders
+# Image Assets for Nostrum Dream Spaces Website
 
-This folder should contain the following images for the website:
+This folder contains the following images for the website:
 
 ## Logo & Branding
-- logo.png (Main logo)
-- logo-white.png (White version for dark backgrounds)
-- favicon.ico (Website favicon)
+- icon.png (Main logo and favicon - used throughout the site)
 
-## Hero Section
-- hero/hero-1.jpg (Main hero image - luxury interior)
-- hero/hero-2.jpg (Interior design showcase)
-- hero/hero-3.jpg (Construction project)
+## High-Quality Images from Unsplash.com
 
-## About Section
-- about/about-intro.jpg (Company introduction image)
-- about/company-story.jpg (Company story image)
-- about/approach.jpg (Design approach image)
+All images on the website are now sourced from Unsplash.com for high-quality, royalty-free visuals:
 
-## Services
-- services/interior-design.jpg
-- services/exterior-design.jpg
-- services/construction.jpg
-- services/modular-works.jpg
-- services/flooring-tiling.jpg
-- services/plumbing-waterproofing.jpg
-- services/service-benefits.jpg
+### Hero Section Images:
+- Luxury interior design showcase
+- Modern living spaces
+- Premium construction projects
 
-## Projects Portfolio
-- projects/project-1.jpg (Luxury Villa Interior)
-- projects/project-2.jpg (Corporate Office Design)
-- projects/project-3.jpg (Modern House Elevation)
-- projects/project-4.jpg (Restaurant Interior)
-- projects/project-5.jpg (Apartment Renovation)
-- projects/project-6.jpg (Retail Store Design)
+### About Section Images:
+- Company story and team photos
+- Professional team member portraits
+- Office and workspace images
 
-## Team Members
-- team/member-1.jpg (Rajesh Gupta)
-- team/member-2.jpg (Priya Sharma)
-- team/member-3.jpg (Amit Patel)
-- team/member-4.jpg (Sneha Reddy)
+### Services Images:
+- Interior design projects
+- Exterior and facade designs
+- Construction and building projects
+- Modular kitchen and furniture
+- Flooring and tiling examples
+- Plumbing and waterproofing work
 
-## Testimonials
-- testimonials/client-1.jpg
-- testimonials/client-2.jpg
-- testimonials/client-3.jpg
+### Portfolio Images:
+- Luxury villa interiors
+- Corporate office designs
+- Modern house elevations
+- Restaurant and commercial interiors
+- Apartment renovations
+- Retail store designs
 
-## Other Images
-- why-choose-us.jpg (Why choose us section)
+### Team Member Photos:
+- Professional headshots from Unsplash
+- Diverse team representation
+- High-quality portrait photography
 
-Note: Replace these placeholder references with actual high-quality images that represent your brand and work.
+### Testimonial Images:
+- Client photos (stock photos for privacy)
+- Professional business portraits
+
+## Image Specifications:
+- Format: JPG/PNG optimized for web
+- Quality: High resolution (800px-2000px width)
+- Source: Unsplash.com (royalty-free)
+- Optimization: Compressed for fast loading
+- Responsive: Multiple sizes for different devices
+
+## Usage:
+All images are directly linked from Unsplash CDN for:
+- Fast loading times
+- High availability
+- Automatic optimization
+- No storage requirements
+
+Note: The only local image required is icon.png for the logo and favicon.

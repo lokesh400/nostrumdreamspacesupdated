@@ -2,26 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// const app = express();
-// const PORT = process.env.PORT || 3000;
-// const HOST = process.env.HOST || 'localhost';
-
-// Security middleware
-// app.use(helmet({
-//     contentSecurityPolicy: false, // Disable for development
-//     crossOriginEmbedderPolicy: false
-// }));
-
-// Rate limiting
-// const limiter = rateLimit({
-//     windowMs: (process.env.RATE_LIMIT_WINDOW || 15) * 60 * 1000, // 15 minutes
-//     max: process.env.RATE_LIMIT_MAX_REQUESTS || 100, // limit each IP to 100 requests per windowMs
-//     message: 'Too many requests from this IP, please try again later.'
-// });
-// app.use(limiter);
-
-
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 // Set EJS as templating engine
 app.set('view engine', 'ejs');
@@ -36,21 +17,30 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.render('index', { 
         title: 'Nostrum Dream Spaces - Designing Dreams. Building Reality.',
-        page: 'home'
+        description: 'Premium Interior Design, Exterior Design, Construction & Turnkey Solutions in Haryana. Transform your spaces with our expert design and construction services.',
+        keywords: 'interior design Haryana, exterior design, construction services, turnkey projects, modular kitchen, home renovation Palwal',
+        page: 'pages/home',
+        currentUrl: '/'
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('pages/about', { 
-        title: 'About Us - Nostrum Dream Spaces',
-        page: 'about'
+        title: 'About Us - Nostrum Dream Spaces | Premium Design & Construction',
+        description: 'Learn about Nostrum Dream Spaces - a leading interior design and construction company in Haryana with 2+ years of excellence in creating exceptional spaces.',
+        keywords: 'about nostrum dream spaces, interior design company Haryana, construction company Palwal, design team',
+        page: 'pages/about',
+        currentUrl: '/about'
     });
 });
 
 app.get('/services', (req, res) => {
-    res.render('pages/services', { 
-        title: 'Our Services - Nostrum Dream Spaces',
-        page: 'services'
+    res.render('layout', { 
+        title: 'Our Services - Interior Design, Construction & Turnkey Solutions',
+        description: 'Comprehensive design and construction services including interior design, exterior design, modular works, flooring, plumbing, and complete turnkey solutions.',
+        keywords: 'interior design services, construction services, modular kitchen, flooring, plumbing, turnkey projects Haryana Palwal',
+        page: 'pages/services',
+        currentUrl: '/services'
     });
 });
 
@@ -146,16 +136,22 @@ app.get('/blog', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-    res.render('pages/contact', { 
-        title: 'Contact Us - Nostrum Dream Spaces',
-        page: 'contact'
+    res.render('layout', { 
+        title: 'Contact Us - Get in Touch | Nostrum Dream Spaces',
+        description: 'Contact Nostrum Dream Spaces for your interior design and construction needs in Haryana. Get free consultation and quotes.',
+        keywords: 'contact interior designer Haryana, construction company contact Palwal, design consultation, free quote',
+        page: 'pages/contact',
+        currentUrl: '/contact'
     });
 });
 
 app.get('/quote', (req, res) => {
-    res.render('pages/quote', { 
-        title: 'Get a Quote - Nostrum Dream Spaces',
-        page: 'quote'
+    res.render('layout', { 
+        title: 'Get Free Quote - Interior Design & Construction | Nostrum Dream Spaces',
+        description: 'Get a free detailed quote for your interior design or construction project. Quick response within 24 hours with transparent pricing.',
+        keywords: 'free interior design quote, construction quote Mumbai, design estimate, project cost',
+        page: 'pages/quote',
+        currentUrl: '/quote'
     });
 });
 
