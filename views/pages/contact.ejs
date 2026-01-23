@@ -1,0 +1,329 @@
+<%- include('../layout', { body: `
+<!-- Page Header -->
+<section class="page-header section-padding bg-dark text-white">
+    <div class="container">
+        <div class="page-header-content text-center">
+            <h1 class="page-title animate-fade-up">Contact Us</h1>
+            <p class="page-subtitle animate-fade-up delay-1">Get in touch with our team for your next project</p>
+            <nav class="breadcrumb animate-fade-up delay-2">
+                <a href="/">Home</a> / <span>Contact</span>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-info scroll-animate-left">
+                    <div class="section-header">
+                        <span class="section-label">Get In Touch</span>
+                        <h2 class="section-title">Let's Start Your Dream Project</h2>
+                        <p class="section-description">
+                            Ready to transform your space? We'd love to hear about your project 
+                            and discuss how we can bring your vision to life.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Visit Our Office</h4>
+                                <p>123 Design Street, Premium Plaza<br>Mumbai, Maharashtra 400001<br>India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Call Us</h4>
+                                <p>
+                                    <a href="tel:+919876543210">+91 98765 43210</a><br>
+                                    <a href="tel:+918765432109">+91 87654 32109</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Email Us</h4>
+                                <p>
+                                    <a href="mailto:info@nostrumdreamspaces.com">info@nostrumdreamspaces.com</a><br>
+                                    <a href="mailto:projects@nostrumdreamspaces.com">projects@nostrumdreamspaces.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Business Hours</h4>
+                                <p>
+                                    Monday - Saturday: 9:00 AM - 7:00 PM<br>
+                                    Sunday: 10:00 AM - 5:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="contact-form-wrapper scroll-animate-right">
+                    <div class="contact-form-header">
+                        <h3>Send Us a Message</h3>
+                        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                    </div>
+                    
+                    <form class="contact-form" action="/contact" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType">Project Type</label>
+                            <select id="projectType" name="projectType">
+                                <option value="">Select Project Type</option>
+                                <option value="interior-design">Interior Design</option>
+                                <option value="exterior-design">Exterior Design</option>
+                                <option value="construction">Construction & Turnkey</option>
+                                <option value="modular-works">Modular Works</option>
+                                <option value="renovation">Renovation & Remodeling</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select Budget Range</option>
+                                <option value="under-5-lakh">Under ₹5 Lakh</option>
+                                <option value="5-10-lakh">₹5 - 10 Lakh</option>
+                                <option value="10-25-lakh">₹10 - 25 Lakh</option>
+                                <option value="25-50-lakh">₹25 - 50 Lakh</option>
+                                <option value="above-50-lakh">Above ₹50 Lakh</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="immediate">Immediate (Within 1 month)</option>
+                                <option value="1-3-months">1-3 Months</option>
+                                <option value="3-6-months">3-6 Months</option>
+                                <option value="6-12-months">6-12 Months</option>
+                                <option value="planning-stage">Still in Planning Stage</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project requirements, space details, and any specific preferences..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for design tips and updates
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" value="yes" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="/terms-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy-policy" target="_blank">Privacy Policy</a> *
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large btn-block">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.9947334935!2d72.8776559!3d19.0759837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9b5b5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-overlay">
+            <div class="map-info">
+                <h4>Visit Our Showroom</h4>
+                <p>Experience our design expertise firsthand at our premium showroom</p>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-primary">Get Directions</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="contact-faq section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">Quick Answers</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-description">
+                Find quick answers to common questions about our services and process.
+            </p>
+        </div>
+        
+        <div class="faq-grid">
+            <div class="faq-item scroll-animate">
+                <div class="faq-question">
+                    <h4>How long does a typical project take?</h4>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Project timelines vary based on scope and complexity. Interior design projects typically take 4-8 weeks, while complete construction projects can take 3-6 months. We provide detailed timelines during consultation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item scroll-animate delay-1">
+                <div class="faq-question">
+                    <h4>Do you provide 3D visualizations?</h4>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide detailed 3D visualizations and virtual walkthroughs for all our design projects. This helps you visualize the final result before execution begins.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item scroll-animate delay-2">
+                <div class="faq-question">
+                    <h4>What is included in your turnkey services?</h4>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our turnkey services include everything from design and planning to construction, finishing, and handover. We handle all aspects including permits, materials, labor, and quality control.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item scroll-animate delay-3">
+                <div class="faq-question">
+                    <h4>Do you offer warranty on your work?</h4>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide comprehensive warranty on all our work. Construction work comes with 1-year warranty, while specific components may have extended warranties as per manufacturer terms.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="/faq" class="btn btn-primary">View All FAQs</a>
+        </div>
+    </div>
+</section>
+
+<!-- Alternative Contact Methods -->
+<section class="alternative-contact section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">More Ways to Connect</span>
+            <h2 class="section-title">Choose Your Preferred Method</h2>
+        </div>
+        
+        <div class="contact-methods">
+            <div class="contact-method scroll-animate">
+                <div class="method-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h4>WhatsApp Chat</h4>
+                <p>Get instant responses to your queries via WhatsApp</p>
+                <a href="https://wa.me/919876543210" class="btn btn-outline" target="_blank">
+                    Chat Now
+                </a>
+            </div>
+            
+            <div class="contact-method scroll-animate delay-1">
+                <div class="method-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h4>Schedule Consultation</h4>
+                <p>Book a free consultation at your convenience</p>
+                <a href="/quote" class="btn btn-outline">
+                    Book Now
+                </a>
+            </div>
+            
+            <div class="contact-method scroll-animate delay-2">
+                <div class="method-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h4>Video Call</h4>
+                <p>Discuss your project via video call with our experts</p>
+                <a href="/contact" class="btn btn-outline">
+                    Schedule Call
+                </a>
+            </div>
+            
+            <div class="contact-method scroll-animate delay-3">
+                <div class="method-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h4>Site Visit</h4>
+                <p>We can visit your site for detailed assessment</p>
+                <a href="/quote" class="btn btn-outline">
+                    Request Visit
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+` }) %>

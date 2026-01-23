@@ -1,0 +1,488 @@
+<%- include('../layout', { body: `
+<!-- Page Header -->
+<section class="page-header section-padding bg-dark text-white">
+    <div class="container">
+        <div class="page-header-content text-center">
+            <h1 class="page-title animate-fade-up">Get Free Quote</h1>
+            <p class="page-subtitle animate-fade-up delay-1">Tell us about your project and get a detailed quote within 24 hours</p>
+            <nav class="breadcrumb animate-fade-up delay-2">
+                <a href="/">Home</a> / <span>Get Quote</span>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Quote Form Section -->
+<section class="quote-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="quote-form-wrapper scroll-animate-left">
+                    <div class="quote-form-header">
+                        <h2>Project Details</h2>
+                        <p>Please provide detailed information about your project to help us give you an accurate quote.</p>
+                    </div>
+                    
+                    <form class="quote-form" action="/quote" method="POST" enctype="multipart/form-data">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="section-number">01</span>
+                                Personal Information
+                            </h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Information -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="section-number">02</span>
+                                Project Information
+                            </h3>
+                            
+                            <div class="form-group">
+                                <label for="projectType">Project Type *</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="">Select Project Type</option>
+                                    <option value="interior-design">Interior Design</option>
+                                    <option value="exterior-design">Exterior Design</option>
+                                    <option value="construction">Complete Construction</option>
+                                    <option value="turnkey">Turnkey Project</option>
+                                    <option value="modular-kitchen">Modular Kitchen</option>
+                                    <option value="modular-furniture">Modular Furniture</option>
+                                    <option value="renovation">Renovation & Remodeling</option>
+                                    <option value="flooring">Flooring & Tiling</option>
+                                    <option value="plumbing">Plumbing & Waterproofing</option>
+                                    <option value="soundproofing">Soundproofing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="propertyType">Property Type *</label>
+                                    <select id="propertyType" name="propertyType" required>
+                                        <option value="">Select Property Type</option>
+                                        <option value="apartment">Apartment</option>
+                                        <option value="villa">Villa/Independent House</option>
+                                        <option value="office">Office</option>
+                                        <option value="retail">Retail Store</option>
+                                        <option value="restaurant">Restaurant/Cafe</option>
+                                        <option value="hotel">Hotel</option>
+                                        <option value="other-commercial">Other Commercial</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="areaSize">Area Size (sq ft) *</label>
+                                    <input type="number" id="areaSize" name="areaSize" placeholder="e.g., 1200" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rooms">Number of Rooms</label>
+                                    <select id="rooms" name="rooms">
+                                        <option value="">Select</option>
+                                        <option value="1bhk">1 BHK</option>
+                                        <option value="2bhk">2 BHK</option>
+                                        <option value="3bhk">3 BHK</option>
+                                        <option value="4bhk">4 BHK</option>
+                                        <option value="5bhk">5+ BHK</option>
+                                        <option value="studio">Studio</option>
+                                        <option value="na">Not Applicable</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="floors">Number of Floors</label>
+                                    <select id="floors" name="floors">
+                                        <option value="">Select</option>
+                                        <option value="1">1 Floor</option>
+                                        <option value="2">2 Floors</option>
+                                        <option value="3">3 Floors</option>
+                                        <option value="4+">4+ Floors</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Budget & Timeline -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="section-number">03</span>
+                                Budget & Timeline
+                            </h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="budget">Budget Range *</label>
+                                    <select id="budget" name="budget" required>
+                                        <option value="">Select Budget Range</option>
+                                        <option value="under-2-lakh">Under ₹2 Lakh</option>
+                                        <option value="2-5-lakh">₹2 - 5 Lakh</option>
+                                        <option value="5-10-lakh">₹5 - 10 Lakh</option>
+                                        <option value="10-25-lakh">₹10 - 25 Lakh</option>
+                                        <option value="25-50-lakh">₹25 - 50 Lakh</option>
+                                        <option value="50-1-crore">₹50 Lakh - 1 Crore</option>
+                                        <option value="above-1-crore">Above ₹1 Crore</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="timeline">Preferred Timeline *</label>
+                                    <select id="timeline" name="timeline" required>
+                                        <option value="">Select Timeline</option>
+                                        <option value="immediate">Immediate (Within 1 month)</option>
+                                        <option value="1-2-months">1-2 Months</option>
+                                        <option value="2-4-months">2-4 Months</option>
+                                        <option value="4-6-months">4-6 Months</option>
+                                        <option value="6-12-months">6-12 Months</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="section-number">04</span>
+                                Project Details
+                            </h3>
+                            
+                            <div class="form-group">
+                                <label for="projectDescription">Project Description *</label>
+                                <textarea id="projectDescription" name="projectDescription" rows="4" placeholder="Describe your project requirements, design preferences, specific needs, etc." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="designStyle">Preferred Design Style</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="designStyle[]" value="modern">
+                                        <span class="checkmark"></span>
+                                        Modern
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="designStyle[]" value="contemporary">
+                                        <span class="checkmark"></span>
+                                        Contemporary
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="designStyle[]" value="traditional">
+                                        <span class="checkmark"></span>
+                                        Traditional
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="designStyle[]" value="minimalist">
+                                        <span class="checkmark"></span>
+                                        Minimalist
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="designStyle[]" value="luxury">
+                                        <span class="checkmark"></span>
+                                        Luxury
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="designStyle[]" value="industrial">
+                                        <span class="checkmark"></span>
+                                        Industrial
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specificRequirements">Specific Requirements</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="requirements[]" value="3d-visualization">
+                                        <span class="checkmark"></span>
+                                        3D Visualization
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="requirements[]" value="false-ceiling">
+                                        <span class="checkmark"></span>
+                                        False Ceiling
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="requirements[]" value="lighting-design">
+                                        <span class="checkmark"></span>
+                                        Lighting Design
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="requirements[]" value="electrical-work">
+                                        <span class="checkmark"></span>
+                                        Electrical Work
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="requirements[]" value="painting">
+                                        <span class="checkmark"></span>
+                                        Painting & Polishing
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="requirements[]" value="furniture">
+                                        <span class="checkmark"></span>
+                                        Custom Furniture
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- File Upload -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="section-number">05</span>
+                                Reference Images & Documents
+                            </h3>
+                            
+                            <div class="form-group">
+                                <label for="referenceImages">Upload Reference Images</label>
+                                <div class="file-upload-area">
+                                    <input type="file" id="referenceImages" name="referenceImages[]" multiple accept="image/*,.pdf">
+                                    <div class="file-upload-content">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <p>Drag & drop files here or click to browse</p>
+                                        <span>Supported formats: JPG, PNG, PDF (Max 10MB each)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="floorPlan">Floor Plan (if available)</label>
+                                <input type="file" id="floorPlan" name="floorPlan" accept="image/*,.pdf">
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Preferences -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">
+                                <span class="section-number">06</span>
+                                Contact Preferences
+                            </h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="preferredContact">Preferred Contact Method</label>
+                                    <select id="preferredContact" name="preferredContact">
+                                        <option value="phone">Phone Call</option>
+                                        <option value="email">Email</option>
+                                        <option value="whatsapp">WhatsApp</option>
+                                        <option value="site-visit">Site Visit</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="preferredTime">Preferred Contact Time</label>
+                                    <select id="preferredTime" name="preferredTime">
+                                        <option value="morning">Morning (9 AM - 12 PM)</option>
+                                        <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                        <option value="evening">Evening (5 PM - 8 PM)</option>
+                                        <option value="anytime">Anytime</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="additionalNotes">Additional Notes</label>
+                                <textarea id="additionalNotes" name="additionalNotes" rows="3" placeholder="Any additional information or special requests..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Terms & Submit -->
+                        <div class="form-section">
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="siteVisit" value="yes">
+                                    <span class="checkmark"></span>
+                                    I would like to schedule a free site visit for accurate measurements
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" value="yes">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for design tips and project updates
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" value="yes" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="/terms-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy-policy" target="_blank">Privacy Policy</a> *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large btn-block">
+                                Submit Quote Request
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="quote-sidebar scroll-animate-right">
+                    <!-- Quote Process -->
+                    <div class="sidebar-card">
+                        <h3>Quote Process</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Submit Request</h5>
+                                    <p>Fill out the detailed form with your project requirements</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Initial Review</h5>
+                                    <p>Our team reviews your requirements within 2-4 hours</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Site Visit</h5>
+                                    <p>Free site visit for accurate measurements (if required)</p>
+                                </div>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Detailed Quote</h5>
+                                    <p>Receive comprehensive quote within 24-48 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- What's Included -->
+                    <div class="sidebar-card">
+                        <h3>What's Included in Quote</h3>
+                        <ul class="included-list">
+                            <li><i class="fas fa-check"></i> Detailed cost breakdown</li>
+                            <li><i class="fas fa-check"></i> Material specifications</li>
+                            <li><i class="fas fa-check"></i> Project timeline</li>
+                            <li><i class="fas fa-check"></i> 3D visualization (if applicable)</li>
+                            <li><i class="fas fa-check"></i> Warranty information</li>
+                            <li><i class="fas fa-check"></i> Payment schedule</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="sidebar-card">
+                        <h3>Need Help?</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Call Us</strong>
+                                    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <p><a href="https://wa.me/919876543210">Chat Now</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p><a href="mailto:info@nostrumdreamspaces.com">info@nostrumdreamspaces.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial -->
+                    <div class="sidebar-card testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"The quote was detailed and transparent. No hidden costs, and the final project was completed exactly as quoted."</p>
+                            <div class="testimonial-author">
+                                <strong>Rajesh Kumar</strong>
+                                <span>Villa Owner, Mumbai</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Get Quote Section -->
+<section class="why-quote section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">Why Choose Our Quote</span>
+            <h2 class="section-title">Transparent & Detailed Pricing</h2>
+        </div>
+        
+        <div class="why-quote-grid">
+            <div class="why-quote-item scroll-animate">
+                <div class="why-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h4>Accurate Pricing</h4>
+                <p>Detailed cost breakdown with no hidden charges or surprise costs</p>
+            </div>
+            
+            <div class="why-quote-item scroll-animate delay-1">
+                <div class="why-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h4>Quick Turnaround</h4>
+                <p>Receive your detailed quote within 24-48 hours of submission</p>
+            </div>
+            
+            <div class="why-quote-item scroll-animate delay-2">
+                <div class="why-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Price Protection</h4>
+                <p>Quote prices are valid for 30 days with no price escalation</p>
+            </div>
+            
+            <div class="why-quote-item scroll-animate delay-3">
+                <div class="why-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h4>No Obligation</h4>
+                <p>Free quote with no commitment required from your side</p>
+            </div>
+        </div>
+    </div>
+</section>
+` }) %>

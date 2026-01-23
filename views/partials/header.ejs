@@ -1,0 +1,77 @@
+<header class="header" id="header">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="/" class="logo">
+                    <img src="/images/logo.png" alt="Nostrum Dream Spaces" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Nostrum Dream Spaces</h1>
+                        <span class="tagline">Designing Dreams. Building Reality.</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link <%= page === 'about' ? 'active' : '' %>">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/services" class="nav-link <%= page === 'services' || page.includes('design') || page.includes('construction') || page.includes('modular') || page.includes('flooring') || page.includes('plumbing') || page.includes('soundproofing') || page.includes('renovation') ? 'active' : '' %>">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-grid">
+                                <div class="dropdown-column">
+                                    <h4>Design Services</h4>
+                                    <a href="/interior-design">Interior Design</a>
+                                    <a href="/exterior-design">Exterior Design</a>
+                                    <a href="/construction">Construction & Turnkey</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Specialized Works</h4>
+                                    <a href="/modular-works">Modular Works</a>
+                                    <a href="/flooring-tiling">Flooring & Tiling</a>
+                                    <a href="/plumbing-waterproofing">Plumbing & Waterproofing</a>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>Additional Services</h4>
+                                    <a href="/soundproofing">Soundproofing</a>
+                                    <a href="/renovation">Renovation & Remodeling</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/portfolio" class="nav-link <%= page === 'portfolio' ? 'active' : '' %>">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/process" class="nav-link <%= page === 'process' ? 'active' : '' %>">Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog" class="nav-link <%= page === 'blog' ? 'active' : '' %>">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link <%= page === 'contact' ? 'active' : '' %>">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-cta">
+                    <a href="/quote" class="btn btn-primary">Get Quote</a>
+                    <a href="https://wa.me/1234567890" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>

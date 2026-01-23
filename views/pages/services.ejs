@@ -1,0 +1,397 @@
+<%- include('../layout', { body: `
+<!-- Page Header -->
+<section class="page-header section-padding bg-dark text-white">
+    <div class="container">
+        <div class="page-header-content text-center">
+            <h1 class="page-title animate-fade-up">Our Services</h1>
+            <p class="page-subtitle animate-fade-up delay-1">Comprehensive design and construction solutions for every need</p>
+            <nav class="breadcrumb animate-fade-up delay-2">
+                <a href="/">Home</a> / <span>Services</span>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="services-overview section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">What We Offer</span>
+            <h2 class="section-title">Complete Design & Construction Solutions</h2>
+            <p class="section-description">
+                From conceptual design to final execution, we provide end-to-end services 
+                to transform your vision into reality with precision and excellence.
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card hover-lift scroll-animate">
+                <div class="service-image">
+                    <img src="/images/services/interior-design.jpg" alt="Interior Design">
+                    <div class="service-overlay">
+                        <a href="/interior-design" class="btn btn-white">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Interior Design</h3>
+                    <p>Transform your interiors with our luxury design solutions for residential and commercial spaces.</p>
+                    <ul class="service-features">
+                        <li>Residential Interior Design</li>
+                        <li>Commercial Interior Design</li>
+                        <li>3D Visualization</li>
+                        <li>Space Planning</li>
+                        <li>Custom Furniture Design</li>
+                    </ul>
+                    <a href="/interior-design" class="service-link">Explore Interior Design <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card hover-lift scroll-animate delay-1">
+                <div class="service-image">
+                    <img src="/images/services/exterior-design.jpg" alt="Exterior Design">
+                    <div class="service-overlay">
+                        <a href="/exterior-design" class="btn btn-white">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Exterior Design</h3>
+                    <p>Create stunning facades and elevations that make lasting first impressions.</p>
+                    <ul class="service-features">
+                        <li>Facade Design</li>
+                        <li>Elevation Planning</li>
+                        <li>Landscape Integration</li>
+                        <li>Lighting Design</li>
+                        <li>Material Selection</li>
+                    </ul>
+                    <a href="/exterior-design" class="service-link">Explore Exterior Design <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card hover-lift scroll-animate delay-2">
+                <div class="service-image">
+                    <img src="/images/services/construction.jpg" alt="Construction & Turnkey">
+                    <div class="service-overlay">
+                        <a href="/construction" class="btn btn-white">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Construction & Turnkey</h3>
+                    <p>Complete construction solutions from foundation to finishing with quality assurance.</p>
+                    <ul class="service-features">
+                        <li>End-to-End Construction</li>
+                        <li>Project Management</li>
+                        <li>Quality Control</li>
+                        <li>Timely Delivery</li>
+                        <li>Post-Construction Support</li>
+                    </ul>
+                    <a href="/construction" class="service-link">Explore Construction <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card hover-lift scroll-animate delay-3">
+                <div class="service-image">
+                    <img src="/images/services/modular-works.jpg" alt="Modular Works">
+                    <div class="service-overlay">
+                        <a href="/modular-works" class="btn btn-white">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-kitchen-set"></i>
+                    </div>
+                    <h3>Modular Works</h3>
+                    <p>Custom modular solutions for kitchens, wardrobes, and furniture designed for modern living.</p>
+                    <ul class="service-features">
+                        <li>Modular Kitchens</li>
+                        <li>Wardrobes & Storage</li>
+                        <li>Custom Furniture</li>
+                        <li>Space Optimization</li>
+                        <li>Premium Finishes</li>
+                    </ul>
+                    <a href="/modular-works" class="service-link">Explore Modular Works <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card hover-lift scroll-animate delay-4">
+                <div class="service-image">
+                    <img src="/images/services/flooring-tiling.jpg" alt="Flooring & Tiling">
+                    <div class="service-overlay">
+                        <a href="/flooring-tiling" class="btn btn-white">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <h3>Flooring & Tiling</h3>
+                    <p>Premium flooring solutions including marble, granite, tiles, and wooden flooring.</p>
+                    <ul class="service-features">
+                        <li>Marble & Granite</li>
+                        <li>Ceramic & Vitrified Tiles</li>
+                        <li>Wooden Flooring</li>
+                        <li>Anti-Skid Solutions</li>
+                        <li>Professional Installation</li>
+                    </ul>
+                    <a href="/flooring-tiling" class="service-link">Explore Flooring <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card hover-lift scroll-animate delay-5">
+                <div class="service-image">
+                    <img src="/images/services/plumbing-waterproofing.jpg" alt="Plumbing & Waterproofing">
+                    <div class="service-overlay">
+                        <a href="/plumbing-waterproofing" class="btn btn-white">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Plumbing & Waterproofing</h3>
+                    <p>Complete plumbing systems and waterproofing solutions for lasting protection.</p>
+                    <ul class="service-features">
+                        <li>Plumbing Installation</li>
+                        <li>Bathroom Fitting</li>
+                        <li>Waterproofing Solutions</li>
+                        <li>Leak Detection & Repair</li>
+                        <li>Maintenance Services</li>
+                    </ul>
+                    <a href="/plumbing-waterproofing" class="service-link">Explore Plumbing <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Services -->
+<section class="additional-services section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">Additional Services</span>
+            <h2 class="section-title">Specialized Solutions</h2>
+            <p class="section-description">
+                Beyond our core services, we offer specialized solutions to meet 
+                unique requirements and enhance your living or working spaces.
+            </p>
+        </div>
+        
+        <div class="additional-services-grid">
+            <div class="additional-service-card scroll-animate">
+                <div class="service-icon">
+                    <i class="fas fa-volume-mute"></i>
+                </div>
+                <h4>Soundproofing Solutions</h4>
+                <p>Professional soundproofing for home theaters, studios, offices, and residential spaces.</p>
+                <a href="/soundproofing" class="btn btn-outline btn-small">Learn More</a>
+            </div>
+            
+            <div class="additional-service-card scroll-animate delay-1">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h4>Renovation & Remodeling</h4>
+                <p>Transform existing spaces with our comprehensive renovation and remodeling services.</p>
+                <a href="/renovation" class="btn btn-outline btn-small">Learn More</a>
+            </div>
+            
+            <div class="additional-service-card scroll-animate delay-2">
+                <div class="service-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h4>Lighting Design</h4>
+                <p>Create the perfect ambiance with our professional lighting design and installation services.</p>
+                <a href="/services" class="btn btn-outline btn-small">Learn More</a>
+            </div>
+            
+            <div class="additional-service-card scroll-animate delay-3">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h4>Painting & Polishing</h4>
+                <p>Premium painting and polishing services with high-quality materials and finishes.</p>
+                <a href="/services" class="btn btn-outline btn-small">Learn More</a>
+            </div>
+            
+            <div class="additional-service-card scroll-animate delay-4">
+                <div class="service-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h4>False Ceiling</h4>
+                <p>Elegant false ceiling solutions with integrated lighting and modern design elements.</p>
+                <a href="/services" class="btn btn-outline btn-small">Learn More</a>
+            </div>
+            
+            <div class="additional-service-card scroll-animate delay-5">
+                <div class="service-icon">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+                <h4>3D Visualization</h4>
+                <p>Realistic 3D renderings and virtual walkthroughs to visualize your project before execution.</p>
+                <a href="/services" class="btn btn-outline btn-small">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Process -->
+<section class="service-process section-padding">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label">Our Process</span>
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-description">
+                Our systematic approach ensures seamless project execution and 
+                exceptional results for every client.
+            </p>
+        </div>
+        
+        <div class="process-timeline">
+            <div class="timeline-item scroll-animate">
+                <div class="timeline-marker">
+                    <span class="step-number">01</span>
+                </div>
+                <div class="timeline-content">
+                    <h4>Initial Consultation</h4>
+                    <p>We begin with a detailed discussion to understand your vision, requirements, budget, and timeline.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item scroll-animate delay-1">
+                <div class="timeline-marker">
+                    <span class="step-number">02</span>
+                </div>
+                <div class="timeline-content">
+                    <h4>Site Survey & Analysis</h4>
+                    <p>Our team conducts a thorough site survey to assess space, structure, and technical requirements.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item scroll-animate delay-2">
+                <div class="timeline-marker">
+                    <span class="step-number">03</span>
+                </div>
+                <div class="timeline-content">
+                    <h4>Design Development</h4>
+                    <p>We create detailed design concepts with 3D visualizations and material specifications.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item scroll-animate delay-3">
+                <div class="timeline-marker">
+                    <span class="step-number">04</span>
+                </div>
+                <div class="timeline-content">
+                    <h4>Approval & Planning</h4>
+                    <p>After design approval, we prepare detailed project plans, timelines, and resource allocation.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item scroll-animate delay-4">
+                <div class="timeline-marker">
+                    <span class="step-number">05</span>
+                </div>
+                <div class="timeline-content">
+                    <h4>Execution & Monitoring</h4>
+                    <p>Our skilled team executes the project with regular quality checks and progress updates.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item scroll-animate delay-5">
+                <div class="timeline-marker">
+                    <span class="step-number">06</span>
+                </div>
+                <div class="timeline-content">
+                    <h4>Final Handover</h4>
+                    <p>We complete final inspections, address any concerns, and hand over your dream space.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="/process" class="btn btn-primary btn-large">Learn More About Our Process</a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Our Services -->
+<section class="why-choose-services section-padding bg-dark text-white">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-label text-primary">Why Choose Us</span>
+            <h2 class="section-title">Service Excellence</h2>
+            <p class="section-description">
+                Our commitment to quality, innovation, and customer satisfaction 
+                sets us apart in the industry.
+            </p>
+        </div>
+        
+        <div class="service-benefits">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="benefits-list scroll-animate-left">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Premium Quality Materials</h5>
+                                <p>We source only the finest materials from trusted suppliers to ensure lasting quality.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Expert Craftsmanship</h5>
+                                <p>Our skilled artisans and craftsmen bring years of experience to every project.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Timely Delivery</h5>
+                                <p>We respect your time and ensure projects are completed within agreed timelines.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h5>Comprehensive Warranty</h5>
+                                <p>All our work comes with comprehensive warranty and after-service support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="benefits-image scroll-animate-right">
+                        <img src="/images/services/service-benefits.jpg" alt="Service Benefits" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section-padding bg-primary text-white">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Let's discuss your project requirements and create something extraordinary together.</p>
+            <div class="cta-buttons">
+                <a href="/quote" class="btn btn-white btn-large">Get Free Quote</a>
+                <a href="/contact" class="btn btn-outline-white btn-large">Schedule Consultation</a>
+            </div>
+        </div>
+    </div>
+</section>
+` }) %>
