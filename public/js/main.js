@@ -3,24 +3,57 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM loaded, initializing components...');
 
-    // Test hamburger menu directly
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    // Wait a bit for all styles to load
+    setTimeout(function() {
+        // Test hamburger menu directly
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
 
-    if (navToggle && navMenu) {
-        console.log('Found hamburger elements, adding direct listener');
-        navToggle.addEventListener('click', function (e) {
-            console.log('Direct hamburger click detected!');
-            e.preventDefault();
-            e.stopPropagation();
-
-            navToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
+        console.log('Elements found:', {
+            navToggle: navToggle,
+            navMenu: navMenu,
+            navToggleVisible: navToggle ? window.getComputedStyle(navToggle).display : 'not found',
+            navTogglePosition: navToggle ? window.getComputedStyle(navToggle).position : 'not found'
         });
-    } else {
-        console.log('Hamburger elements not found:', { navToggle, navMenu });
-    }
+
+        if (navToggle && navMenu) {
+            console.log('Found hamburger elements, adding direct listener');
+            
+            // Remove any existing listeners
+            navToggle.replaceWith(navToggle.cloneNode(true));
+            const newNavToggle = document.getElementById('nav-toggle');
+            
+            newNavToggle.addEventListener('click', function (e) {
+                console.log('Direct hamburger click detected!');
+                e.preventDefault();
+                e.stopPropagation();
+
+                newNavToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+                
+                console.log('Classes toggled:', {
+                    toggleActive: newNavToggle.classList.contains('active'),
+                    menuActive: navMenu.classList.contains('active'),
+                    bodyMenuOpen: document.body.classList.contains('menu-open')
+                });
+            });
+            
+            // Also add touch event for mobile
+            newNavToggle.addEventListener('touchstart', function (e) {
+                console.log('Touch event detected on hamburger');
+                e.preventDefault();
+                e.stopPropagation();
+
+                newNavToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            });
+            
+        } else {
+            console.log('Hamburger elements not found:', { navToggle, navMenu });
+        }
+    }, 100);
 
     // Initialize all components
     initNavigation();

@@ -172,6 +172,25 @@ app.post('/contact', (req, res) => {
     res.redirect('/contact?success=true');
 });
 
+// keepalive route
+app.get("/test", (req, res) => {
+  res.status(200).json({ status: "alive", time: Date.now() });
+});
+
+function startKeepAlive() {
+  setInterval(async () => {
+    try {
+      const res = await fetch('https://nostrumdreamspaces.onrender.com/test');
+      if (!res.ok) throw new Error("Ping failed");
+      console.log("✅ Self ping successful");
+    } catch (err) {
+      console.error("❌ Self ping error:", err.message);
+    }
+  }, 2000); // 2 seconds
+}
+
+startKeepAlive();
+
 app.listen(PORT, () => {
     console.log(`Nostrum Dream Spaces website running on port ${PORT}`);
     console.log(`Visit: http://localhost:${PORT}`);
