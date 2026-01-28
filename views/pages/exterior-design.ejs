@@ -101,6 +101,93 @@
                 Comprehensive exterior design solutions for every building type
             </p>
         </div>
+
+        <!-- Exterior Services -->
+<section class="service-types section-padding bg-light">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header text-center">
+      <span class="section-label">Outdoor Expertise</span>
+      <h2 class="section-title">Exterior Designing Services</h2>
+      <p class="section-description">
+        Elegant and functional exterior solutions that enhance curb appeal,
+        durability, and outdoor living.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="service-types-grid">
+
+      <% const exteriorServices = [
+        {
+          title: "Front Elevation Designing (2D & 3D)",
+          img: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
+        },
+        {
+          title: "Facade Cladding (ACP, HPL, Glass, Stone)",
+          img: "https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg"
+        },
+        {
+          title: "Landscaping & Garden Designing",
+          img: "https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg"
+        },
+        {
+          title: "Pergola, Gazebo & Outdoor Furniture Setup",
+          img: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"
+        },
+        {
+          title: "Lighting Design for Exterior Walls",
+          img: "https://images.pexels.com/photos/1123262/pexels-photo-1123262.jpeg"
+        },
+        {
+          title: "Compound Wall & Main Gate Designing",
+          img: "https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg"
+        },
+        {
+          title: "Entrance Arch & Driveway Designing",
+          img: "https://images.pexels.com/photos/210617/pexels-photo-210617.jpeg"
+        },
+        {
+          title: "Terrace & Balcony Designing",
+          img: "https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg"
+        },
+        {
+          title: "Exterior Paint & Texture",
+          img: "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg"
+        }
+      ]; %>
+
+      <% exteriorServices.forEach((service, index) => { %>
+        <div class="service-type-card scroll-animate">
+
+          <!-- Image -->
+          <div class="service-type-image">
+            <img
+              src="<%= service.img %>?auto=compress&cs=tinysrgb&w=900"
+              alt="<%= service.title %>"
+            />
+
+            <!-- Number Badge -->
+            <div class="badge">
+              <%= index + 1 < 10 ? `0${index + 1}` : index + 1 %>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="service-type-content">
+            <h3><%= service.title %></h3>
+            <div class="divider"></div>
+          </div>
+
+        </div>
+      <% }) %>
+
+    </div>
+
+  </div>
+</section>
+
         
         <div class="service-types-grid">
             <div class="service-type-card scroll-animate">

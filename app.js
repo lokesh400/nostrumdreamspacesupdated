@@ -123,6 +123,13 @@ app.get('/testimonials', (req, res) => {
     });
 });
 
+app.get('/architectural-planning', (req, res) => {
+    res.render('pages/architectural-planning', {
+        title: 'Architectural Planning Services - Nostrum Dream Spaces',
+        page: 'architectural-planning'
+    });
+});
+
 app.get('/faq', (req, res) => {
     res.render('pages/faq', {
         title: 'FAQ - Nostrum Dream Spaces',

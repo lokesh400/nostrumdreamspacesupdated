@@ -101,6 +101,105 @@
                 Comprehensive construction solutions for residential and commercial projects
             </p>
         </div>
+
+        <!-- Construction Works -->
+<section class="service-types section-padding bg-light">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header text-center">
+      <span class="section-label">Complete Build Solutions</span>
+      <h2 class="section-title">Construction Works</h2>
+      <p class="section-description">
+        End-to-end construction services delivered with structural strength,
+        quality craftsmanship, and timely execution.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="service-types-grid">
+
+      <% const constructionServices = [
+        {
+          title: "Residential Building Construction",
+          img: "https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg"
+        },
+        {
+          title: "Commercial Building Construction",
+          img: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg"
+        },
+        {
+          title: "Farmhouse Construction",
+          img: "https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg"
+        },
+        {
+          title: "Civil Contracting Services",
+          img: "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg"
+        },
+        {
+          title: "Renovation & Remodeling Services",
+          img: "https://images.pexels.com/photos/3768911/pexels-photo-3768911.jpeg"
+        },
+        {
+          title: "Boundary Wall Construction",
+          img: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg"
+        },
+        {
+          title: "Brickwork & Masonry Services",
+          img: "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg"
+        },
+        {
+          title: "False Ceiling & Partition Work",
+          img: "https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg"
+        },
+        {
+          title: "Waterproofing (TPO, APP, Liquid Membrane etc.)",
+          img: "https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg"
+        },
+        {
+          title: "Flooring Work (Tile, Marble, Granite, Kota)",
+          img: "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg"
+        },
+        {
+          title: "Steel Structure Fabrication",
+          img: "https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg"
+        },
+        {
+          title: "Roof Shed & PEB Work",
+          img: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg"
+        }
+      ]; %>
+
+      <% constructionServices.forEach((service, index) => { %>
+        <div class="service-type-card scroll-animate">
+
+          <!-- Image -->
+          <div class="service-type-image">
+            <img
+              src="<%= service.img %>?auto=compress&cs=tinysrgb&w=900"
+              alt="<%= service.title %>"
+            />
+
+            <!-- Number Badge -->
+            <div class="badge">
+              <%= index + 1 < 10 ? `0${index + 1}` : index + 1 %>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="service-type-content">
+            <h3><%= service.title %></h3>
+            <div class="divider"></div>
+          </div>
+
+        </div>
+      <% }) %>
+
+    </div>
+
+  </div>
+</section>
+
         
         <div class="service-types-grid">
             <div class="service-type-card scroll-animate">
